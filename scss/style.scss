@@ -1,0 +1,31 @@
+// Estilos para el sitio Documentos familiares
+// la práctica de SASS en clase puedo verla en D:\papa\VisualStudioProyects\Coderhouse\01_DesarrolloWeb_63295\03_PracticoNro3_Enero6_2025\css
+// Coder house pre entrega 03
+
+// los @import se debe colocar en orden de uso
+// tener siempre presente que se leerán y ejeutarán en el orden que pongamos
+
+// 1ro. van lo de la carpeta utilities
+@import "./utilities/variables";
+@import "./utilities/maps";
+@import "./utilities/mixins";
+
+// 2do  van lo de la carpeta base
+@import "./base/reset";
+
+// luego layout, components ...
+@import "./components/card";
+@import "./components/form";
+@import "./components/fotos";
+
+@import "./layout/main-index";
+@import "./layout/header";
+@import "./layout/body";
+@import "./layout/footer";
+
+// ultimo lugar van los media query
+@import "./layout/media/media992";
+@import "./layout/media/media768";
+@import "./layout/media/media576";
+@import "./layout/media/media440";
+

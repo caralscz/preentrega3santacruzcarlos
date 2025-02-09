@@ -1,0 +1,42 @@
+/*  correspondena  _cards.scss  */
+
+.cardTemaDePagina {
+    /* se usa en la presentacion de la pagina 
+       donde indicamos para qué se usa esa página */
+    display: flex;
+    flex-direction: row; // lo modificamos en _media576.scss y en _media440.scss
+    max-width: 33.75rem; //540px 
+    border: 1px solid rgb(156, 154, 154);
+    border-radius: 0.625rem; //10px
+}
+
+.cardTemaImg {
+    //align-content: space-around;
+    //la foto del tema 
+    border-radius: 0.625rem  0.625rem  0.625rem  0.625rem; //10px
+    max-width: auto; //ancho de la imagen del tema
+    height: 15.625rem; //250px;  alto de la imagen del tema
+    text-align: center;
+}
+
+.cardTemaParrafo {
+    text-align: left;
+    font-size: 1rem; //16px
+
+    h5 {
+        font-size: 1.5rem; // 24px
+        font-weight: bold;
+        padding-left: 1.5rem;
+    }
+
+    p {
+        padding-top: 1.5rem;
+        padding-left: 1.5rem;
+    }
+}
+
+// para el comentario final abajo, secundario, en la tarjeta 
+.pSecundario {
+    color: rgb(128, 129, 129);
+
+}

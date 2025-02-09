@@ -1,0 +1,19 @@
+/* esto es _main.index.scss */
+
+.main-index {
+    section {
+        background-color: $colorFondo;
+        div {
+            img {
+                // la foto del home ( .imgAbuelosHome )
+                width: 18.75rem; //300px;
+                border-radius: 0.625rem; //10px;
+                //     /*object-fit: contain;  */ 
+            }
+            h3{
+                background-color: $backgroundColorContenedor;
+
+            }
+        }
+    }
+}

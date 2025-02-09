@@ -1,0 +1,54 @@
+/* desde  _fotos.scss */
+
+
+/* Media query para 480 768 1024*/
+.lasFotos {
+    display: grid;
+    padding: .0625rem; /*1px*/
+    gap: .0625rem; /*1px*/
+    border: 1px solid $colorBordeLasFotos;
+    border-radius: .3125rem;
+    /* margin: 10px;
+    box-sizing: border-box; */
+}
+
+@media (min-width: 30rem) {  /*480px*/
+    .lasFotos {
+        grid-template-columns: 12fr;
+    }
+}
+
+@media (min-width: 48rem) {    /*768px*/
+    .lasFotos {
+        grid-template-columns: 6fr 6fr;
+    }
+}
+
+@media (min-width: 64rem) { /*1024px*/
+    .lasFotos {
+        grid-template-columns: 4fr 4fr 4fr;
+    }
+}
+
+@media (min-width: 75rem) {    /*1200px*/
+    .lasFotos {
+        grid-template-columns: 3fr 3fr 3fr 3fr;
+    }
+}
+
+
+.unaFoto {
+    display: flex;
+    flex-direction: column;
+    padding: .3125rem;
+    align-items: center;
+    justify-content: space-between;
+    /* Distribuye el espacio entre los elementos */
+    background-color:$backgroundColorContenedor;
+}
+
+
+.imgFoto {    /* la foto del album */
+    width: 15.625rem;
+    /*250px*/
+}

@@ -1,0 +1,32 @@
+/*  del _footer.scss */
+footer {
+    //position: absolute;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    display: flex;
+    flex-direction: row; // lo modificamos en _media576.scss y en _media440.scss
+    flex: 0 1 auto;
+    max-width: 100%; //33.75rem; //540px  //
+    background-color: $colorFondo;
+
+}
+
+.footerDivIcono {
+    max-width: 20%;
+    align-content: space-around;
+
+    img {
+        /* el icono de la izquierda del pie de pagina */
+        width: 2.5rem; //40px
+        //margin-right: .625rem; // 10px
+    }
+}
+
+.footerDivTexto {
+    text-align: left;
+    color: $textColorSuave1; //$textFooterColor;
+    font-size: 0.75rem; // 12px;
+    max-width: 80%;
+    // align-content: space-around;
+}

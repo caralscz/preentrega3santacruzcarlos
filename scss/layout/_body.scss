@@ -1,0 +1,19 @@
+/* scss del _body.scss  */
+html, body { 
+    max-width: 71.25rem;
+     /*1140px*/
+    background-color: $colorFondo;  
+}
+  
+.contenedor {
+    // margin: 0 auto;
+    max-width: 80%;
+    background-color: $backgroundColorContenedor;
+    margin-top: .625rem;  // 10px
+    // padding: 20px;
+}
+
+.contenedorHeader {
+    @extend .contenedor;
+    margin-top: 0%;
+}

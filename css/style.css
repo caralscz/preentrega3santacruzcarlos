@@ -1,0 +1,352 @@
+@charset "UTF-8";
+/* textos */
+/* en el menu el fondo del <a:over> */
+/* éste es el código scss de mi reset  */
+* {
+  margin: 0 auto;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen, Ubuntu, Cantarell, "Open Sans", "Helvetica Neue", sans-serif;
+}
+
+/* y otras propiedades a nivel general */
+a {
+  text-decoration: none;
+}
+
+/*  correspondena  _cards.scss  */
+.cardTemaDePagina {
+  /* se usa en la presentacion de la pagina 
+     donde indicamos para qué se usa esa página */
+  display: flex;
+  flex-direction: row;
+  max-width: 33.75rem;
+  border: 1px solid rgb(156, 154, 154);
+  border-radius: 0.625rem;
+}
+
+.cardTemaImg {
+  border-radius: 0.625rem 0.625rem 0.625rem 0.625rem;
+  max-width: auto;
+  height: 15.625rem;
+  text-align: center;
+}
+
+.cardTemaParrafo {
+  text-align: left;
+  font-size: 1rem;
+}
+.cardTemaParrafo h5 {
+  font-size: 1.5rem;
+  font-weight: bold;
+  padding-left: 1.5rem;
+}
+.cardTemaParrafo p {
+  padding-top: 1.5rem;
+  padding-left: 1.5rem;
+}
+
+.pSecundario {
+  color: rgb(128, 129, 129);
+}
+
+/* del scss form */
+.formCom0 {
+  display: flex;
+  flex-direction: column;
+  max-width: 33.75rem;
+  border: 1px solid rgb(156, 154, 154);
+  border-radius: 0.625rem;
+  margin-top: 20px;
+}
+.formCom0 div {
+  max-width: 33.75rem;
+  margin-top: 10px;
+  border-radius: 10px;
+  margin: 1rem;
+  justify-content: flex-start;
+}
+.formCom0 div h5 {
+  font-size: 1.5rem;
+  font-weight: bold;
+}
+
+/* desde  _fotos.scss */
+/* Media query para 480 768 1024*/
+.lasFotos {
+  display: grid;
+  padding: 0.0625rem; /*1px*/
+  gap: 0.0625rem; /*1px*/
+  border: 1px solid rgb(212, 216, 220);
+  border-radius: 0.3125rem;
+  /* margin: 10px;
+  box-sizing: border-box; */
+}
+
+@media (min-width: 30rem) { /*480px*/
+  .lasFotos {
+    grid-template-columns: 12fr;
+  }
+}
+@media (min-width: 48rem) { /*768px*/
+  .lasFotos {
+    grid-template-columns: 6fr 6fr;
+  }
+}
+@media (min-width: 64rem) { /*1024px*/
+  .lasFotos {
+    grid-template-columns: 4fr 4fr 4fr;
+  }
+}
+@media (min-width: 75rem) { /*1200px*/
+  .lasFotos {
+    grid-template-columns: 3fr 3fr 3fr 3fr;
+  }
+}
+.unaFoto {
+  display: flex;
+  flex-direction: column;
+  padding: 0.3125rem;
+  align-items: center;
+  justify-content: space-between;
+  /* Distribuye el espacio entre los elementos */
+  background-color: rgb(217, 240, 248);
+}
+
+.imgFoto { /* la foto del album */
+  width: 15.625rem;
+  /*250px*/
+}
+
+/* esto es _main.index.scss */
+.main-index section {
+  background-color: rgb(124, 174, 190);
+}
+.main-index section div img {
+  width: 18.75rem;
+  border-radius: 0.625rem;
+}
+.main-index section div h3 {
+  background-color: rgb(217, 240, 248);
+}
+
+/* corresponden a  _header.scss */
+/*  
+        Para h1 asignamos la fuente cargada desde:  
+        https://fonts.google.com/selection/embed 
+        ver link en head de .html
+*/
+.headerH1 {
+  font-family: "Imperial Script", serif;
+  font-weight: 700;
+  color: black;
+  text-align: left;
+}
+
+.headerNav {
+  background-color: rgb(124, 174, 190);
+}
+.headerNav div ul {
+  list-style: none;
+  display: flex;
+  justify-content: flex-end;
+  gap: 1.25rem;
+}
+.headerNav div ul li {
+  margin: 0.01rem;
+}
+.headerNav div ul li a {
+  text-decoration: none;
+  color: black;
+  font-size: 0.75rem;
+}
+.headerNav div ul li a img {
+  width: 0.9375rem;
+}
+.headerNav div ul li a:hover {
+  background-color: rgb(168, 198, 241);
+  color: white;
+}
+
+/* scss del _body.scss  */
+html, body {
+  max-width: 71.25rem;
+  /*1140px*/
+  background-color: rgb(124, 174, 190);
+}
+
+.contenedor, .contenedorHeader {
+  max-width: 80%;
+  background-color: rgb(217, 240, 248);
+  margin-top: 0.625rem;
+}
+
+.contenedorHeader {
+  margin-top: 0%;
+}
+
+/*  del _footer.scss */
+footer {
+  bottom: 0;
+  left: 0;
+  right: 0;
+  display: flex;
+  flex-direction: row;
+  flex: 0 1 auto;
+  max-width: 100%;
+  background-color: rgb(124, 174, 190);
+}
+
+.footerDivIcono {
+  max-width: 20%;
+  align-content: space-around;
+}
+.footerDivIcono img {
+  /* el icono de la izquierda del pie de pagina */
+  width: 2.5rem;
+}
+
+.footerDivTexto {
+  text-align: left;
+  color: rgba(0, 0, 0, 0.514);
+  font-size: 0.75rem;
+  max-width: 80%;
+}
+
+/*  de _media992.scss  */
+/* Se aplica cuando el ancho de la pantalla es menor o igual a 992px*/
+/* max-width: Define un límite superior para el ancho de la pantalla.
+                el orden para aplicar es 1140;768;570;440
+     min-width: Define un límite inferior para el ancho de la pantalla.
+                el orden para aplicar es 1140;768;570;440
+                  el orden para aplicar es 1140;768;570;440
+  */
+.col-lg-11 {
+  width: 91.66%;
+  /* (11/12) * 100% para ocupar 11 de 12 columnas */
+}
+
+.col-lg-1 {
+  width: 8.33%;
+  /* (1/12) * 100% para ocupar 1 de 12 columnas */
+}
+
+@media (max-width: 992px) {
+  /* media 992px */
+  footer {
+    flex-direction: row;
+  }
+  .col-lg-11 {
+    /* El estilo dentro de esta media query se aplicará a pantallas de al menos 992px de ancho */
+  }
+  .col-lg-1 {
+    /* El estilo dentro de esta media query se aplicará a pantallas de al menos 992px de ancho */
+  }
+}
+/* del  _media768.scss  */
+/* Se aplica cuando el ancho de la pantalla es menor o igual a 768px*/
+/* max-width: Define un límite superior para el ancho de la pantalla.
+                el orden para aplicar es 1140;768;570;440
+     min-width: Define un límite inferior para el ancho de la pantalla.
+                el orden para aplicar es 1140;768;570;440
+                  el orden para aplicar es 1140;768;570;440
+  */
+.col-md-1 {
+  width: 8.33%;
+  /* (1/12) * 100% para ocupar 1 de 12 columnas */
+}
+
+.col-md-11 {
+  width: 91.66%;
+  /* (11/12) * 100% para ocupar 11 de 12 columnas */
+}
+
+@media (max-width: 768px) {
+  /* media 768px */
+  footer {
+    flex-direction: row;
+  }
+  .col-md-11 {
+    /* El estilo dentro de esta media query se aplicará a pantallas de al menos 768px de ancho */
+  }
+  .col-md-1 {
+    /* El estilo dentro de esta media query se aplicará a pantallas de al menos 768px de ancho */
+  }
+}
+/* del   _media576.scss */
+/* Se aplica cuando el ancho de la pantalla es menor o igual a 576px*/
+/* max-width: Define un límite superior para el ancho de la pantalla.
+                el orden para aplicar es 1140;768;570;440
+     min-width: Define un límite inferior para el ancho de la pantalla.
+                el orden para aplicar es 1140;768;570;440
+                  el orden para aplicar es 1140;768;570;440
+  */
+.col-sm-12 {
+  width: 100%;
+}
+
+@media (max-width: 576px) {
+  .col-sm-12 {
+    width: 100%;
+    /* Aquí puedes ajustar el ancho si necesitas menos de 12 columnas */
+  }
+  .contenedor, .contenedorHeader {
+    max-width: 95%;
+  }
+  .cardTemaDePagina {
+    flex-direction: column;
+  }
+  .cardTemaParrafo {
+    color: textColorNormal;
+  }
+  .cardTemaImg {
+    max-height: 9.375rem;
+    max-width: auto;
+  }
+  footer {
+    flex-direction: column;
+  }
+  .footerTodo {
+    flex-direction: column;
+  }
+  .headerNav div ul {
+    flex-direction: column;
+    text-align: left;
+    margin: 0.01rem;
+    gap: 0rem;
+  }
+}
+/* Se aplica cuando el ancho de la pantalla es menor o igual a 440px*/
+/* max-width: Define un límite superior para el ancho de la pantalla.
+              el orden para aplicar es 1140;768;570;440
+   min-width: Define un límite inferior para el ancho de la pantalla.
+              el orden para aplicar es 1140;768;570;440
+                el orden para aplicar es 1140;768;570;440
+*/
+@media (max-width: 440px) {
+  /* media 440px*/
+  .contenedor, .contenedorHeader {
+    max-width: 95%;
+  }
+  .cardTemaDePagina {
+    flex-direction: column;
+  }
+  .cardTemaImg {
+    max-height: 9.375rem;
+    max-width: auto;
+  }
+  footer {
+    flex-direction: column;
+  }
+  .footerTodo {
+    flex-direction: column;
+  }
+  .headerNav div ul {
+    flex-direction: column;
+    text-align: left;
+    margin: 0.01rem;
+    gap: 0rem;
+  }
+}
+
+/*# sourceMappingURL=style.css.map */

@@ -5,10 +5,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <!-- con link vinculamos al CSS que queremos -->
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet"
-        integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
-
-    <link rel="stylesheet" href="../css/styles.css">
+    <link rel="stylesheet" href="../css/style.css">
     <!--Link a los fonts de google -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -19,66 +16,51 @@
 </head>
 
 <body>
-    <header class="container">
-        <h1 class="text-left">Documentos Familiares</h1>
 
-        <!-- Barra de navegacion - bootstrap -init  style="background-color: #e3f2fd;" -->
-        <nav class="navbar navbar-expand-sm bg-body-tertiary">
-            <div class="container-fluid">
-                <a class="navMenu" href="../index.html">
-                    <img src="../assets/img/icons_home.png" alt="Documentos familares" class="img15">
-                </a>
+    <header class="contenedorHeader">
+        <h1 class="headerH1">Documentos Familiares</h1>
 
-                <button class="navbar-toggler" type="button" data-bs-toggle="collapse"
-                    data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent"
-                    aria-expanded="false" aria-label="Toggle navigation">
-                    <span class="navbar-toggler-icon"></span>
-                </button>
-
-                <div class="collapse navbar-collapse" id="navbarSupportedContent">
-                    <ul class="navbar-nav me-auto mb-2 mb-lg-0">
-                        <li class="nav-item"><a class="nav-link navMenu" href="./docFamHistorias.html">Historias</a>
-                        </li>
-                        <li class="nav-item"><a class="nav-link navMenu" href="./docFamFotos.html">Fotos</a></li>
-                        <li class="nav-item"><a class="nav-link navMenu" href="./docFamDatosUtiles.html">Datos
-                                &uacute;tiles</a></li>
-                        <li class="nav-item"><a class="nav-link navMenu" href="./docFamContacto.html">Contacto</a></li>
-                        <li class="nav-item"><a class="nav-link navMenu" href="./docFamIngreso.html">
-                                <img src="../assets/img/icons_login.png" alt="Ingresar" class="img15"></a></li>
-                    </ul>
-                </div>
+        <!-- Barra de navegacion  -init  style="background-color: #e3f2fd;" -->
+        <nav class="headerNav">
+            <div>
+                <ul>
+                    <li><a href="../index.html">
+                            <img src="../assets/img/icons_home.png" alt="Documentos familares"></a></li>
+                    <li><a href="./docFamHistorias.html">Historias</a></li>
+                    <li><a href="./docFamFotos.html">Fotos</a></li>
+                    <li><a href="./docFamDatosUtiles.html">Datos
+                            &uacute;tiles</a></li>
+                    <li><a href="./docFamContacto.html">Contacto</a></li>
+                    <li><a href="./docFamIngreso.html">
+                            <img src="../assets/img/icons_login.png" alt="Ingresar"></a></li>
+                </ul>
             </div>
-        </nav>
-
-        <!-- Barra de navegacion - bootstrap -fin -->
+        </nav <!-- Barra de navegacion -fin -->
     </header>
 
-    <main class="container">
-        <!-- card  modelo de bootstrap *init* -->
-        <section class="card mb-3" style="max-width: 540px;">
-            <div class="row g-0">
-                <div class="col-md-2" style="align-content:space-around ;">
-                    <img src="../assets/img/Viajando.png" class="img-fluid rounded-start imgTema"
-                        alt="escribir una historia">
-                </div>
-                <div class="col-md-10">
-                    <div class="card-body">
-                        <h5 class="card-title">Fotos</h5>
-                        <p class="card-text">Identificandose por su nombre y apellido, una persona puede pegar sus fotos
-                            y describirlas</p>
-                        <p class="card-text"><small class="text-body-secondary">Si no tiene un usuario v&aacute;lido
-                                debe solicitar uno</small></p>
-                    </div>
-                </div>
+
+    <main>
+        <!-- card  scss *init* -->
+        <section class="contenedor cardTemaDePagina">
+
+            <div>
+                <img src="../assets/img/Viajando.png" class="cardTemaImg" alt="escribir una historia">
+            </div>
+
+            <div class="cardTemaParrafo">
+                <h5>Fotos</h5>
+                <p>Identificandose por su nombre y apellido, una persona puede pegar sus fotos
+                    y describirlas</p>
+                <p><small class="text-body-secondary">Si no tiene un usuario v&aacute;lido
+                        debe solicitar uno</small></p>
             </div>
         </section>
         <!-- card  modelo de bootstrap *fin* -->
 
-
-        <section class="lasFotos"> <!--row-->
+        <section class="contenedor lasFotos"> <!--row-->
 
             <div class="unaFoto">
-                <img src="../assets/img/ArbolPrimavera2024.jpg" alt="Contacto" class="imgFoto">
+                <img src="../assets/img/ArbolPrimavera2024.jpg" class="imgFoto" alt="ArbolPrimavera2024">
                 <p>este &aacute;rbol lo plant&oacute; mi abuelo en 1983 </p>
             </div>
 
@@ -88,55 +70,44 @@
             </div>
 
             <div class="unaFoto">
-                <img src="../assets/img/ArbolPrimavera2024.jpg" alt="Contacto" class="imgFoto">
+                <img src="../assets/img/ArbolPrimavera2024.jpg" class="imgFoto" alt="ArbolPrimavera2024">
                 <p>este &aacute;rbol lo plant&oacute; mi abuelo en 1983 </p>
             </div>
 
             <div class="unaFoto">
-                <img src="../assets/img/ArbolPrimavera2024.jpg" alt="Contacto" class="imgFoto">
+                <img src="../assets/img/ArbolPrimavera2024.jpg" class="imgFoto" alt="ArbolPrimavera2024">
                 <p>este &aacute;rbol lo plant&oacute; mi abuelo en 1983 </p>
             </div>
 
             <div class="unaFoto">
-                <img src="../assets/img/ArbolPrimavera2024.jpg" alt="Contacto" class="imgFoto">
+                <img src="../assets/img/ArbolPrimavera2024.jpg" class="imgFoto" alt="ArbolPrimavera2024">
                 <p>este &aacute;rbol lo plant&oacute; mi abuelo en 1983 </p>
             </div>
 
             <div class="unaFoto">
-                <img src="../assets/img/ArbolPrimavera2024.jpg" alt="Contacto" class="imgFoto">
+                <img src="../assets/img/ArbolPrimavera2024.jpg" class="imgFoto" alt="ArbolPrimavera2024">
                 <p>este &aacute;rbol lo plant&oacute; mi abuelo en 1983 </p>
             </div>
 
         </section>
     </main>
 
+    <footer class="contenedor">
 
-    <footer class="container">
-        <div class="row">
-            <div class="col-sm-12 col-md-1 col-lg-1">
-                <img src="../assets/img/Group.png" alt="Documentos familiares" width="40" height="40">
-            </div>
-            <div class="col-sm-12 col-md-11 col-lg-11 pPiePag">
-                <p>Documentos familiares se hace para registrar y recordar a una familia de inmigrantes en particular
-                </p>
-                <p>Curso coderhouse de Full Stack iniciado en diciembre de 2024</p>
-                <p>Desarrollo Web - Comisión 63295</p>
-                <p>Maximiliano Cardenas - profe / Julio Avantt - Adjunto
-                </p>
-            </div>
+        <div class="footerDivIcono ">
+            <img src="../assets/img/Group.png" alt="Documentos familiares">
         </div>
-    </footer>
 
-    <!-- copiado del sitio de bootstrap 
-     Desde la pag https://getbootstrap.com/docs/5.3/getting-started/download/
-     A los script se los ubica al final por performance, por si tarda al cargar 
-     ya estaría mostrando al usuario parte de la pagina -->
-    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.8/dist/umd/popper.min.js"
-        integrity="sha384-I7E8VVD/ismYTF4hNIPjVp/Zjvgyol6VFvRkX/vR+Vc4jQkC+hVqc2pM8ODewa9r"
-        crossorigin="anonymous"></script>
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.min.js"
-        integrity="sha384-0pUGZvbkm6XF6gxjEnlmuGrJXVbNuzT9qBBavbLwCsOGabYfZo0T0to5eqruptLy"
-        crossorigin="anonymous"></script>
+        <div class="footerDivTexto ">
+            <p>Preentrega 03 - Santa Cruz Carlos A ©</p>
+            <p>Documentos familiares se hace para registrar y recordar a una familia de inmigrantes en particular
+            </p>
+            <p>Curso coderhouse de Full Stack iniciado en diciembre de 2024</p>
+            <p>Desarrollo Web - Comisión 63295</p>
+            <p>Maximiliano Cardenas - profe / Julio Avantt - Adjunto</p>
+        </div>
+
+    </footer>
 
 
 </body>

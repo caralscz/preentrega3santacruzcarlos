@@ -15,7 +15,7 @@ h1 {
     /* asignamos la fuente cargada desde:  https://fonts.google.com/selection/embed 
           ver link en head */
     font-family: "Imperial Script", serif;
-    font-weight: 700;
+    font-weight: 700; 
     color: black;
 }
 

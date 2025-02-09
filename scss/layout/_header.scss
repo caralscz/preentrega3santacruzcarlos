@@ -1,0 +1,55 @@
+/* corresponden a  _header.scss */
+
+/*  
+        Para h1 asignamos la fuente cargada desde:  
+        https://fonts.google.com/selection/embed 
+        ver link en head de .html
+*/
+// el .contentheader está en _body.scss 
+
+.headerH1 {
+    font-family: "Imperial Script", serif;
+    font-weight: 700;
+    color: map-get($colores, color2); // black;
+    text-align: left;
+}
+
+//text-align: right;
+.headerNav {
+    background-color: $colorFondo;
+
+    div {
+
+        ul {
+            list-style: none;
+            //text-align: left;
+            display: flex;
+            justify-content: flex-end;
+            gap: 1.25rem; //20px
+
+            li {
+                //background-color: white;
+                margin: 0.01rem; //0.24px
+
+                a {
+                    text-decoration: none;
+                    color: map-get($colores, color2); //  black;
+                    font-size: .75rem; // 12px// 1.25rem; //20px
+
+                    // los iconos home e ingresar de la barra horizontal 
+                    // class .img15
+                    img {
+                        width: .9375rem; // 15px
+                        //margin-right: .625rem; // 10px
+                    }
+
+
+                    &:hover {
+                        background-color: $textAoverColor;
+                        color: map-get($colores, color1); //  white;
+                    }
+                }
+            }
+        }
+    }
+}

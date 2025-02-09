@@ -1,0 +1,55 @@
+  /* Se aplica cuando el ancho de la pantalla es menor o igual a 440px*/
+  /* max-width: Define un límite superior para el ancho de la pantalla.
+                el orden para aplicar es 1140;768;570;440
+     min-width: Define un límite inferior para el ancho de la pantalla.
+                el orden para aplicar es 1140;768;570;440
+                  el orden para aplicar es 1140;768;570;440
+  */
+  @media (max-width: 440px) {
+
+    /* media 440px*/
+    .contenedor {
+      // definido en _body.scss
+      max-width: 95%;
+      //   /* para verificar que se ejecuta */
+      //   background-color: yellow;
+    }
+
+    .cardTemaDePagina {
+      // definida en _cards.scss
+      flex-direction: column;
+    }
+
+    .cardTemaImg {
+      // definida en _cards.scss
+      //max-width: 30%; //ancho de la imagen del tema
+      max-height: 9.375rem; //150px;  alto de la imagen del tema
+      max-width: auto; //ancho de la imagen del tema
+
+    }
+
+    footer {
+      // definido en _footer.scss
+      flex-direction: column;
+
+    }
+
+    .footerTodo {
+      // definido en _footer.scss
+      flex-direction: column;
+
+    }
+
+    .headerNav {
+
+      // definida en _header.scss 
+      div {
+        ul {
+          flex-direction: column;
+          text-align: left;
+          margin: 0.01rem; //0.24px
+          gap: 0rem;
+        }
+      }
+    }
+  }
