@@ -4,27 +4,36 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <!-- con link vinculamos al CSS que queremos -->
-  <link rel="stylesheet" href="css/style.css">
-  <!--Link a los fonts de google -->
+  <!-- con link vinculamos los CSS que queremos -->
+
+  <!--Link a los fonts de google  - Lo uso en el título H1 -->
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link
     href="https://fonts.googleapis.com/css2?family=Imperial+Script&family=Nunito:ital,wght@0,200..1000;1,200..1000&display=swap"
     rel="stylesheet">
+
+  <!-- Animate.style    animacion -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css" />
+
+  <!-- mis estilos creados -->
+  <link rel="stylesheet" href="css/style.css">
+
   <title>Documentos Familiares</title>
 </head>
 
 <body>
 
   <header class="contenedorHeader">
-    <h1 class="headerH1">Documentos Familiares</h1>
+
+    <!-- <h1 class="headerH1 delay1">Documentos&nbsp;&nbsp;Familiares</h1> -->
+    <h1 class="headerH1 animate__animated  animate__backInLeft">Documentos&nbsp;&nbsp;Familiares</h1>
 
     <!-- Barra de navegacion  -init  style="background-color: #e3f2fd;" -->
     <nav class="headerNav">
       <div>
         <ul>
-          <li><a href="../index.html">
+          <li><a href="#">
               <img src="./assets/img/icons_home.png" alt="Documentos familares"></a></li>
           <li class="nav-item"><a class="nav-link" href="./pages/docFamHistorias.html">Historias</a></li>
           <li class="nav-item"><a class="nav-link" href="./pages/docFamFotos.html">Fotos</a></li>
@@ -45,7 +54,7 @@
         <img src="./assets/img/BisabueloDocumFamiliar.jpg" alt="Bisabuelos de la familia">
       </div>
       <div>
-        <h3>Bienvenidos al libro de recuerdos</h3>
+        <h3 class="delay1">Bienvenidos al libro de recuerdos</h3>
       </div>
     </section>
 
@@ -54,7 +63,7 @@
   <footer class="contenedor">
 
     <div class="footerDivIcono">
-      <img src="./assets/img/Group.png" alt="Documentos familiares">
+      <img src="./assets/img/PiePag00.png" alt="Documentos familiares">
     </div>
 
     <div class="footerDivTexto">

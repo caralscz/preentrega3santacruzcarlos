@@ -1,6 +1,23 @@
 @charset "UTF-8";
 /* textos */
 /* en el menu el fondo del <a:over> */
+/*   de  __animaciones.scss  */
+/*Animacion del título principal de la pagina */
+.delay1 {
+  position: relative;
+  transition-property: font-size;
+  transition-duration: 4s;
+  transition-delay: 2s;
+}
+
+.delay1:hover {
+  transition-property: font-size;
+  transition-duration: 4s;
+  transition-delay: 1s;
+  font-size: 2.5rem;
+  text-align: center;
+}
+
 /* éste es el código scss de mi reset  */
 * {
   margin: 0 auto;
@@ -28,8 +45,9 @@ a {
 .cardTemaImg {
   border-radius: 0.625rem 0.625rem 0.625rem 0.625rem;
   max-width: auto;
-  height: 15.625rem;
+  height: 12.5rem;
   text-align: center;
+  opacity: 0.7;
 }
 
 .cardTemaParrafo {
@@ -72,7 +90,7 @@ a {
 }
 
 /* desde  _fotos.scss */
-/* Media query para 480 768 1024*/
+/* contiene los @media para las fotos */
 .lasFotos {
   display: grid;
   padding: 0.0625rem; /*1px*/
@@ -83,27 +101,9 @@ a {
   box-sizing: border-box; */
 }
 
-@media (min-width: 30rem) { /*480px*/
-  .lasFotos {
-    grid-template-columns: 12fr;
-  }
-}
-@media (min-width: 48rem) { /*768px*/
-  .lasFotos {
-    grid-template-columns: 6fr 6fr;
-  }
-}
-@media (min-width: 64rem) { /*1024px*/
-  .lasFotos {
-    grid-template-columns: 4fr 4fr 4fr;
-  }
-}
-@media (min-width: 75rem) { /*1200px*/
-  .lasFotos {
-    grid-template-columns: 3fr 3fr 3fr 3fr;
-  }
-}
 .unaFoto {
+  /*la cant de fotos por pag se trata en @media */
+  /* en las carpetas _mediaNNN.scss */
   display: flex;
   flex-direction: column;
   padding: 0.3125rem;
@@ -118,6 +118,25 @@ a {
   /*250px*/
 }
 
+/* Media query para 480 768 1024*/
+@media (min-width: 30rem) {
+  /*480px*/
+  .lasFotos {
+    grid-template-columns: 12fr;
+  }
+}
+@media (min-width: 48rem) {
+  /*768px*/
+  .lasFotos {
+    grid-template-columns: 6fr 6fr;
+  }
+}
+@media (min-width: 64rem) {
+  /*1024px*/
+  .lasFotos {
+    grid-template-columns: 4fr 4fr 4fr;
+  }
+}
 /* esto es _main.index.scss */
 .main-index section {
   background-color: rgb(124, 174, 190);
@@ -141,6 +160,12 @@ a {
   font-weight: 700;
   color: black;
   text-align: left;
+  font-size: 2.5rem;
+}
+
+.headerH1:first-letter {
+  color: black;
+  text-shadow: 1px 1px 1px blue;
 }
 
 .headerNav {
@@ -198,19 +223,23 @@ footer {
 }
 
 .footerDivIcono {
-  max-width: 20%;
+  width: 30%;
   align-content: space-around;
+  text-align: left;
 }
 .footerDivIcono img {
   /* el icono de la izquierda del pie de pagina */
-  width: 2.5rem;
+  width: 5.5rem;
+  border-radius: 0.625rem;
+  opacity: 0.7;
+  margin: 0.3rem;
 }
 
 .footerDivTexto {
   text-align: left;
   color: rgba(0, 0, 0, 0.514);
   font-size: 0.75rem;
-  max-width: 80%;
+  max-width: 70%;
 }
 
 /*  de _media992.scss  */
@@ -220,27 +249,14 @@ footer {
      min-width: Define un límite inferior para el ancho de la pantalla.
                 el orden para aplicar es 1140;768;570;440
                   el orden para aplicar es 1140;768;570;440
-  */
-.col-lg-11 {
-  width: 91.66%;
-  /* (11/12) * 100% para ocupar 11 de 12 columnas */
-}
 
-.col-lg-1 {
-  width: 8.33%;
-  /* (1/12) * 100% para ocupar 1 de 12 columnas */
-}
+  El @media de lasFotos están en _fotos.scss  
 
+                  */
 @media (max-width: 992px) {
   /* media 992px */
   footer {
     flex-direction: row;
-  }
-  .col-lg-11 {
-    /* El estilo dentro de esta media query se aplicará a pantallas de al menos 992px de ancho */
-  }
-  .col-lg-1 {
-    /* El estilo dentro de esta media query se aplicará a pantallas de al menos 992px de ancho */
   }
 }
 /* del  _media768.scss  */
@@ -250,27 +266,14 @@ footer {
      min-width: Define un límite inferior para el ancho de la pantalla.
                 el orden para aplicar es 1140;768;570;440
                   el orden para aplicar es 1140;768;570;440
+
+  El @media de lasFotos están en _fotos.scss  
+
   */
-.col-md-1 {
-  width: 8.33%;
-  /* (1/12) * 100% para ocupar 1 de 12 columnas */
-}
-
-.col-md-11 {
-  width: 91.66%;
-  /* (11/12) * 100% para ocupar 11 de 12 columnas */
-}
-
 @media (max-width: 768px) {
   /* media 768px */
   footer {
     flex-direction: row;
-  }
-  .col-md-11 {
-    /* El estilo dentro de esta media query se aplicará a pantallas de al menos 768px de ancho */
-  }
-  .col-md-1 {
-    /* El estilo dentro de esta media query se aplicará a pantallas de al menos 768px de ancho */
   }
 }
 /* del   _media576.scss */
@@ -280,15 +283,16 @@ footer {
      min-width: Define un límite inferior para el ancho de la pantalla.
                 el orden para aplicar es 1140;768;570;440
                   el orden para aplicar es 1140;768;570;440
-  */
-.col-sm-12 {
-  width: 100%;
-}
 
+   El @media de lasFotos están en _fotos.scss  
+
+  */
 @media (max-width: 576px) {
-  .col-sm-12 {
-    width: 100%;
-    /* Aquí puedes ajustar el ancho si necesitas menos de 12 columnas */
+  .headerNav div ul {
+    flex-direction: column;
+    text-align: left;
+    margin: 0.01rem;
+    gap: 0rem;
   }
   .contenedor, .contenedorHeader {
     max-width: 95%;
@@ -309,12 +313,6 @@ footer {
   .footerTodo {
     flex-direction: column;
   }
-  .headerNav div ul {
-    flex-direction: column;
-    text-align: left;
-    margin: 0.01rem;
-    gap: 0rem;
-  }
 }
 /* Se aplica cuando el ancho de la pantalla es menor o igual a 440px*/
 /* max-width: Define un límite superior para el ancho de la pantalla.
@@ -322,9 +320,18 @@ footer {
    min-width: Define un límite inferior para el ancho de la pantalla.
               el orden para aplicar es 1140;768;570;440
                 el orden para aplicar es 1140;768;570;440
-*/
+
+El @media de lasFotos están en _fotos.scss  
+
+                */
 @media (max-width: 440px) {
   /* media 440px*/
+  .headerNav div ul {
+    flex-direction: column;
+    text-align: left;
+    margin: 0.01rem;
+    gap: 0rem;
+  }
   .contenedor, .contenedorHeader {
     max-width: 95%;
   }
@@ -340,12 +347,6 @@ footer {
   }
   .footerTodo {
     flex-direction: column;
-  }
-  .headerNav div ul {
-    flex-direction: column;
-    text-align: left;
-    margin: 0.01rem;
-    gap: 0rem;
   }
 }
 

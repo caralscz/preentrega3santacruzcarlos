@@ -5,17 +5,10 @@
      min-width: Define un límite inferior para el ancho de la pantalla.
                 el orden para aplicar es 1140;768;570;440
                   el orden para aplicar es 1140;768;570;440
+
+  El @media de lasFotos están en _fotos.scss  
+
   */
-
-.col-md-1 {
-  width: 8.33%;
-  /* (1/12) * 100% para ocupar 1 de 12 columnas */
-}
-
-.col-md-11 {
-  width: 91.66%;
-  /* (11/12) * 100% para ocupar 11 de 12 columnas */
-}
 
 @media (max-width: 768px) {
 
@@ -30,13 +23,5 @@
     // definido en _footer.scss
     flex-direction: row;
 
-  }
-
-  .col-md-11 {
-    /* El estilo dentro de esta media query se aplicará a pantallas de al menos 768px de ancho */
-  }
-
-  .col-md-1 {
-    /* El estilo dentro de esta media query se aplicará a pantallas de al menos 768px de ancho */
   }
 }

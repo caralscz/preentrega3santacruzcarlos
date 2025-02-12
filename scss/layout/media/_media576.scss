@@ -5,16 +5,25 @@
      min-width: Define un límite inferior para el ancho de la pantalla.
                 el orden para aplicar es 1140;768;570;440
                   el orden para aplicar es 1140;768;570;440
+
+   El @media de lasFotos están en _fotos.scss  
+
   */
 
-.col-sm-12 {
-  width: 100%;
-}
 
 @media (max-width: 576px) {
-  .col-sm-12 {
-    width: 100%;
-    /* Aquí puedes ajustar el ancho si necesitas menos de 12 columnas */
+
+  .headerNav {
+
+    // definida en _header.scss 
+    div {
+      ul {
+        flex-direction: column;
+        text-align: left;
+        margin: 0.01rem; //0.24px
+        gap: 0rem;
+      }
+    }
   }
 
   .contenedor {
@@ -52,16 +61,4 @@
 
   }
 
-  .headerNav {
-
-    // definida en _header.scss 
-    div {
-      ul {
-        flex-direction: column;
-        text-align: left;
-        margin: 0.01rem; //0.24px
-        gap: 0rem;
-      }
-    }
-  }
 }

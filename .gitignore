@@ -1,0 +1,3 @@
+# archivos y carpetas a ignorar por git (no subir al repositorio)
+# si el nombre finaliza con /, ignora la carpeta y todo su contenido
+.Apuntes/

@@ -1,7 +1,6 @@
 /* desde  _fotos.scss */
+/* contiene los @media para las fotos */
 
-
-/* Media query para 480 768 1024*/
 .lasFotos {
     display: grid;
     padding: .0625rem; /*1px*/
@@ -12,32 +11,9 @@
     box-sizing: border-box; */
 }
 
-@media (min-width: 30rem) {  /*480px*/
-    .lasFotos {
-        grid-template-columns: 12fr;
-    }
-}
-
-@media (min-width: 48rem) {    /*768px*/
-    .lasFotos {
-        grid-template-columns: 6fr 6fr;
-    }
-}
-
-@media (min-width: 64rem) { /*1024px*/
-    .lasFotos {
-        grid-template-columns: 4fr 4fr 4fr;
-    }
-}
-
-@media (min-width: 75rem) {    /*1200px*/
-    .lasFotos {
-        grid-template-columns: 3fr 3fr 3fr 3fr;
-    }
-}
-
-
 .unaFoto {
+    /*la cant de fotos por pag se trata en @media */
+    /* en las carpetas _mediaNNN.scss */ 
     display: flex;
     flex-direction: column;
     padding: .3125rem;
@@ -47,8 +23,36 @@
     background-color:$backgroundColorContenedor;
 }
 
-
 .imgFoto {    /* la foto del album */
     width: 15.625rem;
     /*250px*/
 }
+
+/* Media query para 480 768 1024*/
+@media (min-width: 30rem) { // 480px
+    /*480px*/
+    .lasFotos {
+      grid-template-columns: 12fr;
+    }
+  }
+
+@media (min-width: 48rem) {
+    /*768px*/
+    .lasFotos {
+      grid-template-columns: 6fr 6fr;
+    }
+  }
+
+@media (min-width: 64rem) {
+    /*1024px*/
+    .lasFotos {
+      grid-template-columns: 4fr 4fr 4fr;
+    }
+  }
+  
+  // @media (min-width: 75rem) {
+  //   /*1200px*/
+  //   .lasFotos {
+  //     grid-template-columns: 3fr 3fr 3fr 3fr;
+  //   }
+  // }
