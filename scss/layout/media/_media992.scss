@@ -8,15 +8,43 @@
 
   El @media de lasFotos están en _fotos.scss  
 
-                  */
+  ***    /media1  ***                */
 
-@media (max-width: 992px) {
+// @media (max-width: 62rem) {
+@media (min-width: 62rem) {
+  //992px
 
   /* media 992px */
+
+  .headerNav {
+
+    div {
+      ul {
+        flex-direction: row;
+        gap: 1.25rem; //20px
+      }
+    }
+  }
+
   .contenedor {
     // definido en _body.scss
-    // /* para verificar la ejecucion */    
-    // background-color: rgb(249, 249, 249);
+    // dejo mas margen a los costados
+    max-width: 80%;
+  }
+
+  .cardTemaDePagina {
+    // definida en _cards.scss
+    flex-direction: row;
+  }
+
+  .cardTemaImg {
+    // definida en _cards.scss
+    //la foto del tema 
+    border-radius: 0.625rem 0.625rem 0.625rem 0.625rem; //10px
+    max-width: auto; //ancho de la imagen del tema
+    height: 12.5rem; // 200px// 15.625rem; //250px;  alto de la imagen del tema
+    text-align: center;
+    opacity: 0.7; // Ajusta el valor de opacidad entre 0 y 1 */
 
   }
 
@@ -25,5 +53,12 @@
     flex-direction: row;
 
   }
+
+  .footerTodo {
+    // definido en _footer.scss
+    flex-direction: row;
+
+  }
+
 
 }

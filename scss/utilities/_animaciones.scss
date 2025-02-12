@@ -1,15 +1,17 @@
 /*   de  __animaciones.scss  */
 
 
-/*Animacion del título principal de la pagina */
+/*Animacion del título h3 al pie de la foto del index.html */
 .delay1 {
     position: relative;
     transition-property: font-size;
     transition-duration: 4s;
     transition-delay: 2s;
-    // font-size: 2.5rem;// 40px ; 14px;
     // el font-size se cambia en el hover
     // su valor inicial es el standard de h3 definido en el main-index.scss
+    // podríamos establecerla por ejemplo, asi:
+    // font-size: 2.5rem;// 40px ; 14px;
+
 }
 
 .delay1:hover {

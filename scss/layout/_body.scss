@@ -1,15 +1,20 @@
 /* scss del _body.scss  */
-html, body { 
-    max-width: 71.25rem;
-     /*1140px*/
-    background-color: $colorFondo;  
+// max-width: Limita el ancho máximo de un elemento.
+// min-width: Establece el ancho mínimo de un elemento.
+
+html,
+body {
+    /*440px*/
+    // max-width: 71.25rem; //1140px
+    min-width: 27.5rem;//440px
+    background-color: $colorFondo;
 }
-  
+
 .contenedor {
     // margin: 0 auto;
     max-width: 80%;
     background-color: $backgroundColorContenedor;
-    margin-top: .625rem;  // 10px
+    margin-top: .625rem; // 10px
     // padding: 20px;
 }
 

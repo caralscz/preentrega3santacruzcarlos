@@ -2,7 +2,7 @@
 /* textos */
 /* en el menu el fondo del <a:over> */
 /*   de  __animaciones.scss  */
-/*Animacion del título principal de la pagina */
+/*Animacion del título h3 al pie de la foto del index.html */
 .delay1 {
   position: relative;
   transition-property: font-size;
@@ -118,9 +118,11 @@ a {
   /*250px*/
 }
 
-/* Media query para 480 768 1024*/
-@media (min-width: 30rem) {
-  /*480px*/
+/*                               */
+/* Media query para 440 768 1024 */
+/*                               */
+@media (min-width: 27.5rem) {
+  /*440px*/
   .lasFotos {
     grid-template-columns: 12fr;
   }
@@ -168,6 +170,11 @@ a {
   text-shadow: 1px 1px 1px blue;
 }
 
+/* ========================================
+
+Barra de navegación 
+
+======================================== */
 .headerNav {
   background-color: rgb(124, 174, 190);
 }
@@ -175,7 +182,10 @@ a {
   list-style: none;
   display: flex;
   justify-content: flex-end;
-  gap: 1.25rem;
+  flex-direction: column;
+  text-align: right;
+  font-weight: bolder;
+  gap: 0rem;
 }
 .headerNav div ul li {
   margin: 0.01rem;
@@ -194,9 +204,10 @@ a {
 }
 
 /* scss del _body.scss  */
-html, body {
-  max-width: 71.25rem;
-  /*1140px*/
+html,
+body {
+  /*440px*/
+  min-width: 27.5rem;
   background-color: rgb(124, 174, 190);
 }
 
@@ -242,57 +253,54 @@ footer {
   max-width: 70%;
 }
 
-/*  de _media992.scss  */
-/* Se aplica cuando el ancho de la pantalla es menor o igual a 992px*/
+/* Se aplica cuando el ancho de la pantalla es menor o igual a 440px*/
 /* max-width: Define un límite superior para el ancho de la pantalla.
-                el orden para aplicar es 1140;768;570;440
-     min-width: Define un límite inferior para el ancho de la pantalla.
-                el orden para aplicar es 1140;768;570;440
-                  el orden para aplicar es 1140;768;570;440
+              el orden para aplicar es 1140;992;768;440
+   min-width: Define un límite inferior para el ancho de la pantalla.
+              el orden para aplicar es 440;768;992;1140
 
-  El @media de lasFotos están en _fotos.scss  
+El @media de lasFotos están en _fotos.scss  
 
-                  */
-@media (max-width: 992px) {
-  /* media 992px */
-  footer {
-    flex-direction: row;
+***    /media1  ***                */
+@media (min-width: 27.5rem) {
+  /* media 440px*/
+  .headerNav div ul {
+    flex-direction: column;
+    text-align: right;
+    margin: 0.01rem;
+    gap: 0rem;
   }
-}
-/* del  _media768.scss  */
-/* Se aplica cuando el ancho de la pantalla es menor o igual a 768px*/
-/* max-width: Define un límite superior para el ancho de la pantalla.
-                el orden para aplicar es 1140;768;570;440
-     min-width: Define un límite inferior para el ancho de la pantalla.
-                el orden para aplicar es 1140;768;570;440
-                  el orden para aplicar es 1140;768;570;440
-
-  El @media de lasFotos están en _fotos.scss  
-
-  */
-@media (max-width: 768px) {
-  /* media 768px */
+  .contenedor, .contenedorHeader {
+    max-width: 95%;
+  }
+  .cardTemaDePagina {
+    flex-direction: column;
+  }
+  .cardTemaImg {
+    max-height: 9.375rem;
+    max-width: auto;
+  }
   footer {
-    flex-direction: row;
+    flex-direction: column;
+  }
+  .footerTodo {
+    flex-direction: column;
   }
 }
 /* del   _media576.scss */
 /* Se aplica cuando el ancho de la pantalla es menor o igual a 576px*/
 /* max-width: Define un límite superior para el ancho de la pantalla.
-                el orden para aplicar es 1140;768;570;440
+                el orden para aplicar es 1140;992;768;440
      min-width: Define un límite inferior para el ancho de la pantalla.
-                el orden para aplicar es 1140;768;570;440
-                  el orden para aplicar es 1140;768;570;440
+                el orden para aplicar es 440;768;992;1140
 
    El @media de lasFotos están en _fotos.scss  
 
-  */
-@media (max-width: 576px) {
+  ***    /media1  ***                  */
+@media (min-width: 576px) {
   .headerNav div ul {
-    flex-direction: column;
-    text-align: left;
-    margin: 0.01rem;
-    gap: 0rem;
+    flex-direction: row;
+    gap: 1.25rem;
   }
   .contenedor, .contenedorHeader {
     max-width: 95%;
@@ -314,39 +322,77 @@ footer {
     flex-direction: column;
   }
 }
-/* Se aplica cuando el ancho de la pantalla es menor o igual a 440px*/
-/* max-width: Define un límite superior para el ancho de la pantalla.
-              el orden para aplicar es 1140;768;570;440
-   min-width: Define un límite inferior para el ancho de la pantalla.
-              el orden para aplicar es 1140;768;570;440
-                el orden para aplicar es 1140;768;570;440
+/* del  _media768.scss  */
+/* Se aplica cuando el ancho de la pantalla es menor o igual a 768px
+   max-width: Define un límite superior para el ancho de la pantalla.
+                el orden para aplicar es 1140;992;768;440
+     min-width: Define un límite inferior para el ancho de la pantalla.
+                el orden para aplicar es 440;768;992;1140
 
-El @media de lasFotos están en _fotos.scss  
+  El @media de lasFotos están en _fotos.scss  
 
-                */
-@media (max-width: 440px) {
-  /* media 440px*/
+  ***    /media1  ***                  */
+@media (min-width: 48rem) {
+  /* media 768px */
   .headerNav div ul {
-    flex-direction: column;
-    text-align: left;
-    margin: 0.01rem;
-    gap: 0rem;
+    flex-direction: row;
+    gap: 1.25rem;
   }
   .contenedor, .contenedorHeader {
-    max-width: 95%;
+    max-width: 80%;
   }
   .cardTemaDePagina {
-    flex-direction: column;
+    flex-direction: row;
   }
   .cardTemaImg {
-    max-height: 9.375rem;
+    border-radius: 0.625rem 0.625rem 0.625rem 0.625rem;
     max-width: auto;
+    height: 12.5rem;
+    text-align: center;
+    opacity: 0.7;
   }
   footer {
-    flex-direction: column;
+    flex-direction: row;
   }
   .footerTodo {
-    flex-direction: column;
+    flex-direction: row;
+  }
+}
+/*  de _media992.scss  */
+/* Se aplica cuando el ancho de la pantalla es menor o igual a 992px*/
+/* max-width: Define un límite superior para el ancho de la pantalla.
+                el orden para aplicar es 1140;768;570;440
+     min-width: Define un límite inferior para el ancho de la pantalla.
+                el orden para aplicar es 1140;768;570;440
+                  el orden para aplicar es 1140;768;570;440
+
+  El @media de lasFotos están en _fotos.scss  
+
+  ***    /media1  ***                */
+@media (min-width: 62rem) {
+  /* media 992px */
+  .headerNav div ul {
+    flex-direction: row;
+    gap: 1.25rem;
+  }
+  .contenedor, .contenedorHeader {
+    max-width: 80%;
+  }
+  .cardTemaDePagina {
+    flex-direction: row;
+  }
+  .cardTemaImg {
+    border-radius: 0.625rem 0.625rem 0.625rem 0.625rem;
+    max-width: auto;
+    height: 12.5rem;
+    text-align: center;
+    opacity: 0.7;
+  }
+  footer {
+    flex-direction: row;
+  }
+  .footerTodo {
+    flex-direction: row;
   }
 }
 

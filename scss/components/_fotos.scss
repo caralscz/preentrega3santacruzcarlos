@@ -10,7 +10,7 @@
     /* margin: 10px;
     box-sizing: border-box; */
 }
-
+ 
 .unaFoto {
     /*la cant de fotos por pag se trata en @media */
     /* en las carpetas _mediaNNN.scss */ 
@@ -27,10 +27,11 @@
     width: 15.625rem;
     /*250px*/
 }
-
-/* Media query para 480 768 1024*/
-@media (min-width: 30rem) { // 480px
-    /*480px*/
+/*                               */
+/* Media query para 440 768 1024 */
+/*                               */
+@media (min-width: 27.5rem) { 
+    /*440px*/
     .lasFotos {
       grid-template-columns: 12fr;
     }

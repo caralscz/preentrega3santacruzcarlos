@@ -24,9 +24,9 @@
 @import "./layout/body";
 @import "./layout/footer";
 
-// ultimo lugar van los media query
-@import "./layout/media/media992";
-@import "./layout/media/media768";
-@import "./layout/media/media576";
+// ultimo lugar van los media query  -- orden para min-width: 440; 768; 992; 1140; 
 @import "./layout/media/media440";
+@import "./layout/media/media576";
+@import "./layout/media/media768";
+@import "./layout/media/media992";
 
