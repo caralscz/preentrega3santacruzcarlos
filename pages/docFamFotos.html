@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html lang="en">
 
-<head> 
+<head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <!-- con link vinculamos los CSS que queremos -->
@@ -68,7 +68,7 @@
         <section class="contenedor lasFotos"> <!--row-->
 
             <div class="unaFoto">
-                <img src="../assets/img/ArbolPrimavera2024.jpg" class="imgFoto" alt="ArbolPrimavera2024">
+                <img src="../assets/img/ArbolPrimavera2024.jpg" class="imgFoto" alt="ArbolPrimavera2024" onclick="abrirImagen(this.src)" >
                 <p>este &aacute;rbol lo plant&oacute; mi abuelo en 1983 </p>
             </div>
 
@@ -78,36 +78,43 @@
             </div>
 
             <div class="unaFoto">
-                <img src="../assets/img/FotosCaratula0.png" class="imgFoto" alt="FotosCaratula0">
+                <img src="../assets/img/FotosCaratula0.png" class="imgFoto" alt="FotosCaratula0" onclick="abrirImagen(this.src)" >
                 <p>este &aacute;rbol lo plant&oacute; mi abuelo en 1983 </p>
             </div>
 
             <div class="unaFoto">
-                <img src="../assets/img/FotosCaratula1.png" class="imgFoto" alt="FotosCaratula1">
+                <img src="../assets/img/FotosCaratula1.png" class="imgFoto" alt="FotosCaratula1" onclick="abrirImagen(this.src)>
                 <p>este &aacute;rbol lo plant&oacute; mi abuelo en 1983 </p>
             </div>
 
             <div class="unaFoto">
-                <img src="../assets/img/FotosCaratula2.png" class="imgFoto" alt="FotosCaratula2">
+                <img src="../assets/img/FotosCaratula2.png" class="imgFoto" alt="FotosCaratula2" onclick="abrirImagen(this.src)>
                 <p>este &aacute;rbol lo plant&oacute; mi abuelo en 1983 </p>
             </div>
 
             <div class="unaFoto">
-                <img src="../assets/img/FotosCaratula3.png" class="imgFoto" alt="FotosCaratula3">
+                <img src="../assets/img/FotosCaratula3.png" class="imgFoto" alt="FotosCaratula3" onclick="abrirImagen(this.src)>
                 <p>este &aacute;rbol lo plant&oacute; mi abuelo en 1983 </p>
             </div>
 
             <div class="unaFoto">
-                <img src="../assets/img/TiaConGuitarra.png" class="imgFoto" alt="TiaConGuitarra">
+                <img src="../assets/img/TiaConGuitarra.png" class="imgFoto" alt="TiaConGuitarra" onclick="abrirImagen(this.src)>
                 <p>este &aacute;rbol lo plant&oacute; mi abuelo en 1983 </p>
             </div>
 
             <div class="unaFoto">
-                <img src="../assets/img/ViejaFotoRota.png" class="imgFoto" alt="ViejaFotoRota">
+                <img src="../assets/img/ViejaFotoRota.png" class="imgFoto" alt="ViejaFotoRota" onclick="abrirImagen(this.src)>
                 <p>este &aacute;rbol lo plant&oacute; mi abuelo en 1983 </p>
             </div>
 
         </section>
+
+        <script>
+            function abrirImagen(src) {
+                window.open(src, 'imgGrande', 'width=600,height=400,toolbar=no, location=no, directories=no, status=no, menubar=no, scrollbars=no, resizable=yes');
+            }
+        </script>
+
     </main>
 
     <footer class="contenedor">
